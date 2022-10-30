@@ -27,7 +27,7 @@ p {
   font: 700 18px Roboto;
 }
 
-.navigation-container>a.active {
+.navigation-container>a:hover {
   color: #070707;
 }
 
@@ -170,10 +170,11 @@ h1 {
   margin: 40px 0 86px;
 }
 
-#poportfolio-wrapper-g-l:hover{
+#poportfolio-wrapper-g-l:hover {
   opacity: 90%;
   padding-top: 2px;
 }
+
 #first-gh {
   width: 100%;
 }
@@ -202,11 +203,46 @@ footer>h2 {
   height: 100px;
 }
 
-.first-footer-img{
+.first-footer-img {
   height: 60px;
   border-radius: 20%;
 }
 
-footer img:hover{
+footer img:hover {
   padding-top: 2px;
+}
+
+
+/* blocks-mobile */
+@media screen and (max-width: 768px) {
+  .navigation-container {
+    display: none;
+  }
+
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    margin: 8% -2%;
+}
+
+.menu-btn span {
+    width: 30px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222222;
+    transition: all 0.5s;
+}
+
+.menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+}
+
+.menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+}
+
 }
