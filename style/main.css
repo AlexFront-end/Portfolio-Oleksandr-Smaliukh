@@ -1,6 +1,6 @@
 body {
   width: 1445px;
-  height: 3300px;
+  height: 3250px;
   margin: auto;
   background-color: #ffffff;
 }
@@ -136,7 +136,7 @@ h1 {
 
 .pointer {
   position: sticky;
-  top: 90%;
+  top: 88%;
   left: 92%;
   border: none;
   background: none;
@@ -172,9 +172,11 @@ h1 {
 
 #poportfolio-wrapper-g-l {
   width: 100%;
-  height: 400px;
-  display: flex;
-  justify-content: space-between;
+  height: 800px;
+}
+
+#poportfolio-wrapper-g-l:hover {
+  opacity: 80%;
 }
 
 #first-gh {
@@ -189,10 +191,11 @@ h1 {
   margin-right: auto;
 }
 
-#second-l{
+#second-l {
   width: 100%;
   height: 100.5%;
 }
+
 footer {
   width: 100%;
   height: 220px;
@@ -217,6 +220,47 @@ footer>h2 {
   height: 100px;
 }
 
-.first-footer-img{
+.first-footer-img {
   height: 30px;
+  border-radius: 25%;
+}
+
+.first-footer-img:hover {
+  padding-top: 2px;
+}
+
+/* mobile wrapper */
+
+@media screen and (max-width: 700px) {
+
+  .navigation-container{
+    display: none;
+  }
+
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 60px;
+    right: 0;
+  }
+
+  .menu-btn span {
+    width: 30px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222222;
+    transition: all 0.5s;
+  }
+
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
 }
