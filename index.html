@@ -28,6 +28,16 @@
           <span></span>
         </div>
       </div>
+
+      <div class="menu-burger">
+        <nav>
+          <li><a class="menu-style" href="#about">About me</a></li>
+          <li><a class="menu-style" href="#skills">Skills</a></li>
+          <li><a class="menu-style" href="#portfolio">Portfolio</a></li>
+          <li><a class="menu-style" href="#contacts">Contacts</a></li>
+        </nav>
+      </div>
+
       <p>
         Front end developer from Ukraine<br />
         39 years old
@@ -89,4 +99,13 @@
     </div>
   </footer>
 
-</body
+  <script>
+    let menuBtn = document.querySelector('.menu-btn');
+    let menu = document.querySelector('.menu-burger');
+    menuBtn.addEventListener('click', function () {
+      menuBtn.classList.toggle('active');
+      menu.classList.toggle('active');
+    })
+  </script>
+
+</body>
