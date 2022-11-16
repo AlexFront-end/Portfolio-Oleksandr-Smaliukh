@@ -5,6 +5,11 @@
    background-color: #ffffff;
  }
 
+ #pointer-wrapper {
+   height: 0;
+   width: 0;
+ }
+
  h1,
  h2,
  p {
@@ -226,7 +231,9 @@
    display: none;
  }
 
+
  /* mobile wrapper */
+
 
  @media screen and (max-width: 768px) {
    body {
@@ -252,7 +259,10 @@
    }
 
    .pointer {
-     display: none;
+     width: 2rem;
+     height: 2rem;
+     top: 94%;
+     left: 86%;
    }
 
    .home {
@@ -302,7 +312,6 @@
      right: 0;
      height: 16rem;
      width: 100%;
-     padding-top: 2rem;
      background-color: rgb(0, 0, 0);
      transform: translate(-120%);
      transition: transform 0.5s;
@@ -413,7 +422,7 @@
    }
 
    .portfolio-wrapper {
-     height: 1300px;
+     height: 1270px;
    }
 
    .github-wrapper {
@@ -426,7 +435,7 @@
    }
 
    .graphics-editor {
-     height: 150px;
+     height: 130px;
    }
 
    .graphics-editor img {
@@ -434,11 +443,31 @@
      height: 67px;
    }
 
+   .graphics-editor>p {
+     font-size: 20px;
+   }
+
    .skills-wrapper {
-    height: 250px;
+     height: 250px;
+   }
+
+   .portfolio-wrapper>h2 {
+     padding-top: 20px;
    }
 
    footer {
-     height: 265px;
+     height: 290px;
+   }
+
+   .one {
+    order: 1;
+   }
+
+   .two {
+    order: 2;
+   }
+
+   .three{
+    order: 3;
    }
  }
