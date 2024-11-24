@@ -1,8 +1,12 @@
  body {
    max-width: 1445px;
-   height: 3250px;
+   height: auto;
    margin: auto;
    background-color: #ffffff;
+ }
+
+ image {
+   border-radius: 5px;
  }
 
  #pointer-wrapper {
@@ -18,11 +22,11 @@
 
 
  .navigation-container {
-   width: 65%;
-   height: 90px;
+   width: 100%;
+   height: 110px;
    margin: auto;
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    align-items: center;
    border-bottom: 1px solid #828282;
  }
@@ -39,22 +43,22 @@
  }
 
  .home {
-   max-width: 65%;
+   width: 100%;
    height: 650px;
-   margin: 0 auto 85px;
+   margin: 0 auto;
  }
 
  .home-container {
    width: 100%;
    height: 150px;
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
  }
 
  h1 {
-   width: 30%;
+   width: 40%;
    height: 60px;
-   margin-top: 35px;
+   margin: auto;
    font: 700 47.34px Roboto;
    color: #070707;
  }
@@ -62,13 +66,15 @@
  .home-container>p {
    width: 30%;
    height: 50px;
-   margin-top: 41px;
+   margin: auto;
+   display: flex;
+   align-items: center;
    font: 500 18px Roboto;
-   text-align: right;
  }
 
  .home-image {
-   max-width: 100%;
+   width: 100%;
+   height: 450px;
    border-radius: 5px;
  }
 
@@ -85,7 +91,7 @@
  }
 
  .about-me-content {
-   width: 95%;
+   width: 90%;
    height: 450px;
    display: flex;
    justify-content: space-between;
@@ -94,7 +100,7 @@
  }
 
  .biography {
-   width: 57%;
+   width: 50%;
    height: 220px;
    font: 500 20px Roboto;
    text-align: left;
@@ -102,7 +108,7 @@
 
  .about-me-content>img {
    max-width: 32%;
-   border-radius: 5px;
+   border-radius: 23px;
  }
 
  .skills-wrapper {
@@ -187,14 +193,14 @@
    opacity: 100%;
  }
 
- .github h2{
+ .github h2 {
    padding: 50px 0;
    font: 700 34px Roboto;
  }
 
  footer {
    width: 100%;
-   height: 260px;
+   height: 315px;
    margin: auto;
  }
 
@@ -205,9 +211,9 @@
  }
 
  .footer-wrapper-img {
-   display: flex;
-   justify-content: space-evenly;
    width: 100%;
+   display: flex;
+   justify-content: space-around;
  }
 
  .graphics-editor img {
@@ -242,9 +248,14 @@
    height: auto;
  }
 
+ @media screen and (min-width: 768px) and (max-width: 1200px) {
+   h1 {
+     width: 49%;
+   }
+ }
+
 
  /* mobile wrapper */
-
 
  @media screen and (max-width: 768px) {
    body {
@@ -259,6 +270,7 @@
 
    h1 {
      height: 5rem;
+     width: 60%;
      font: 700 30.34px Roboto;
      color: #070707;
    }
@@ -278,7 +290,7 @@
      width: 2rem;
      height: 2rem;
      top: 92%;
-     left: 46%;
+     left: 48%;
    }
 
    .home {
@@ -294,12 +306,16 @@
      justify-content: space-around;
    }
 
+   .home-image {
+     height: auto;
+   }
+
    .menu-btn {
      width: 30px;
      height: 30px;
      position: relative;
      top: 60px;
-     left: 8rem;
+     left: 4rem;
    }
 
    .menu-btn span {
@@ -413,7 +429,7 @@
    }
 
    .first-footer-img {
-     height: 60%;
+     height: 50%;
      border-radius: 25%;
      display: block;
      margin: 0 auto;
@@ -484,10 +500,20 @@
    .three {
      order: 3;
    }
-   .github{
-    height: auto;
+
+   .github {
+     height: auto;
    }
-   .github h2, footer h2, .about-wrapper h2{
-    padding: 40px 0;
+
+   .github h2, footer h2, .about-wrapper h2 {
+     padding: 40px 0;
    }
  }
+
+ @media screen and (max-width: 450px) {
+  .pointer{
+    left: 46%;
+  }
+ }
+
+ 
