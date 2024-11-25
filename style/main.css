@@ -2,7 +2,7 @@
    max-width: 1445px;
    height: auto;
    margin: auto;
-   background-color: #ffffff;
+   background-color: #121212;
  }
 
  image {
@@ -14,6 +14,15 @@
    width: 0;
  }
 
+ h1, h2 {
+   color: #0bbd20;
+   ;
+ }
+
+ p {
+   color: #ffffff;
+ }
+
  h1,
  h2,
  p {
@@ -22,7 +31,7 @@
 
 
  .navigation-container {
-   width: 100%;
+   width: 85%;
    height: 110px;
    margin: auto;
    display: flex;
@@ -33,18 +42,18 @@
 
 
  .navigation-container a {
-   color: #828282;
+   color: #ffffff;
    text-decoration: none;
    font: 700 18px Roboto;
  }
 
  .navigation-container>a:hover {
-   color: #070707;
+   color: #0bbd20;
  }
 
  .home {
    width: 100%;
-   height: 650px;
+   height: 550px;
    margin: 0 auto;
  }
 
@@ -59,8 +68,7 @@
    width: 40%;
    height: 60px;
    margin: auto;
-   font: 700 47.34px Roboto;
-   color: #070707;
+   font: 700 40px Roboto;
  }
 
  .home-container>p {
@@ -70,18 +78,21 @@
    display: flex;
    align-items: center;
    font: 500 18px Roboto;
+   color: #ffffff;
  }
 
  .home-image {
-   width: 100%;
-   height: 450px;
+   width: 85%;
+   height: 350px;
+   display: block;
+   margin: auto;
    border-radius: 5px;
  }
 
  .about-wrapper {
    width: 100%;
    height: 640px;
-   background-color: #f4f4f4;
+   background-color: #121212;
  }
 
  .about-wrapper>h2 {
@@ -91,8 +102,8 @@
  }
 
  .about-me-content {
-   width: 90%;
-   height: 450px;
+   width: 85%;
+   height: 520px;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -100,15 +111,28 @@
  }
 
  .biography {
-   width: 50%;
+   width: 40%;
    height: 220px;
    font: 500 20px Roboto;
    text-align: left;
  }
 
- .about-me-content>img {
-   max-width: 32%;
-   border-radius: 23px;
+ .wrapper-portrait img {
+   width: 80%;
+   max-width: 200px;
+   height: auto;
+   display: block;
+   margin: auto;
+   transition: all 0.8s ease;
+ }
+
+ .wrapper-portrait img:hover {
+   width: 100%;
+   max-width: 230px;
+ }
+
+ .wrapper-portrait {
+   width: 50%;
  }
 
  .skills-wrapper {
@@ -136,27 +160,34 @@
  .graphics-editor>p {
    text-align: center;
    font: 700 23px Roboto;
-   color: #828282;
  }
 
  .skills-wrapper>h2 {
-   padding-bottom: 70px;
+   padding-bottom: 90px;
    font: 700 34px Roboto;
    text-align: center;
  }
 
  .pointer {
    position: sticky;
-   top: 88%;
-   left: 92%;
+   top: 85%;
+   left: 94%;
    border: none;
-   background: none;
-   opacity: 0.5;
+   width: 30px;
+   height: 30px;
+   background: #ffffff;
+   mask: url("../media/images/pointer.png") no-repeat center;
+   mask-size: contain;
+   -webkit-mask: url('../media/images/pointer.png') no-repeat center;
+   -webkit-mask-size: contain;
+   transition: background-color 0.2s ease;
+   z-index: 1199;
  }
 
  .pointer:hover {
-   opacity: 90%;
+   background: #0bbd20;
  }
+
 
  .portfolio-wrapper {
    width: 100%;
@@ -172,29 +203,64 @@
  }
 
  .portfolio-wrapper>h2 {
-   padding: 50px 0;
+   padding: 90px 0 0;
    font: 700 34px Roboto;
  }
 
  #wrapper-task-portfolio {
-   width: 100%;
+   height: 300px;
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   padding: 20px;
+   overflow: hidden;
  }
 
- #wrapper-task-portfolio img {
-   max-width: 100%;
+ .slide {
+   width: 420px;
+   height: 238px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex: 0 0 auto;
+   transition: transform 0.8s ease, z-index 0.8s ease;
+   overflow: hidden;
+   background-color: #f0f0f0;
+   box-sizing: border-box;
+   border-radius: 10px;
+
+ }
+
+ .slide img {
+   width: 100%;
    height: 100%;
-   border: 2px solid black;
+   object-fit: cover;
+   border-radius: 10px;
+   transition: transform 0.8s ease;
  }
 
- #wrapper-task-portfolio img:hover {
-   border: 2px solid red;
-   opacity: 100%;
+ .slide:hover {
+   transform: scale(1.2) translateY(-20px);
+   z-index: 10;
  }
+
+ .slide:not(:hover) {
+   transform: scale(0.9);
+   opacity: 0.8;
+ }
+
+ #wrapper-task-portfolio .slide:first-child:hover {
+   transform: scale(1.2) translateX(20px) translateY(-20px);
+ }
+
+ #wrapper-task-portfolio .slide:last-child:hover {
+   transform: scale(1.2) translateX(-20px) translateY(-20px);
+ }
+
 
  .github h2 {
-   padding: 50px 0;
+   padding: 0 0 90px;
    font: 700 34px Roboto;
  }
 
@@ -206,14 +272,14 @@
 
  footer>h2 {
    text-align: center;
-   padding: 50px 0 100px;
+   padding: 90px 0;
    font: 700 34px Roboto;
  }
 
  .footer-wrapper-img {
    width: 100%;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-evenly;
  }
 
  .graphics-editor img {
@@ -222,7 +288,7 @@
  }
 
  .first-footer-img {
-   height: 50px;
+   height: 40px;
    border-radius: 25%;
  }
 
@@ -262,6 +328,10 @@
      height: auto;
    }
 
+   .wrapper-portrait {
+     margin: auto;
+   }
+
    .one, .two, .three {
      width: 100%;
      max-width: 100%;
@@ -272,7 +342,6 @@
      height: 5rem;
      width: 60%;
      font: 700 30.34px Roboto;
-     color: #070707;
    }
 
    .mobile-wrapper-p {
@@ -325,7 +394,7 @@
      top: 0;
      left: 50%;
      transform: translate(-50%, -50%);
-     background-color: #222222;
+     background-color: #0bbd20;
      transition: all 0.5s;
    }
 
@@ -397,7 +466,7 @@
 
    .skills-wrapper {
      width: 100%;
-     margin: 30px auto;
+     margin: 0 auto;
    }
 
    .about-me-content {
@@ -408,8 +477,7 @@
 
    .about-wrapper {
      width: 100%;
-     height: 830px;
-     background-color: #f4f4f4;
+     height: 745px;
    }
 
    .first-footer-img {
@@ -452,6 +520,7 @@
      height: auto;
      display: flex;
      flex-wrap: wrap;
+     padding: 0;
    }
 
    .portfolio-wrapper {
@@ -485,10 +554,6 @@
      height: 250px;
    }
 
-   .portfolio-wrapper>h2 {
-     padding-top: 0;
-   }
-
    footer {
      height: 290px;
    }
@@ -505,15 +570,13 @@
      height: auto;
    }
 
-   .github h2, footer h2, .about-wrapper h2 {
-     padding: 40px 0;
+   .github h2, footer h2, .about-wrapper h2, .portfolio-wrapper h2, .skills-wrapper h2 {
+     padding: 60px 0 40px;
    }
  }
 
  @media screen and (max-width: 450px) {
-  .pointer{
-    left: 46%;
-  }
+   .pointer {
+     left: 45%;
+   }
  }
-
- 
