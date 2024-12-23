@@ -544,9 +544,11 @@
      max-height: none;
    }
 
-   .github a{
-    text-decoration-color: #0bbd20;;
+   .github a {
+     text-decoration-color: #0bbd20;
+     ;
    }
+
    .github-wrapper {
      width: 97%;
      height: auto;
@@ -603,6 +605,10 @@
    }
 
    .slide:not(:hover) {
+     transform: none;
+   }
+
+   #wrapper-task-portfolio .slide:first-child:hover, .slide:hover, #wrapper-task-portfolio .slide:last-child:hover {
      transform: none;
    }
 
