@@ -290,17 +290,28 @@
  }
 
  .first-footer-img {
-   height: 40px;
+   height: 35px;
    border-radius: 25%;
-   transition: padding 0.2s ease;
+   opacity: 0.9;
+   transition: box-shadow 0.3s ease, transform 0.3s ease;
+   overflow: hidden;
  }
 
- .first-footer-img:hover {
-   padding-top: 2px;
+ .first-footer-img:hover, .second-footer-img:hover {
+   opacity: 1;
+   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+   transform: scale(1.05);
+ }
+
+ .second-footer-img {
+   height: 35px;
+   border-radius: 50%;
+   opacity: 0.8;
+   transition: box-shadow 0.3s ease, transform 0.3s ease;
+   overflow: hidden;
  }
 
  .github-wrapper {
-   opacity: 92%;
    width: 85%;
  }
 
@@ -324,10 +335,6 @@
 
  .github a:hover {
    text-decoration-color: #0bbd20;
- }
-
- .github h2:hover {
-   color: #ffffff;
  }
 
 
@@ -512,7 +519,7 @@
      font: 700 34px Roboto;
    }
 
-   .first-footer-img {
+   .first-footer-img, .second-footer-img {
      height: 50%;
      border-radius: 25%;
      display: block;
